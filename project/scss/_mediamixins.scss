@@ -1,0 +1,54 @@
+//responsive mixins
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+//rem function
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+//responsive font-size
+@media screen and (max-width: 1200px) { //hd
+	html {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 992px) { //laptop
+	html {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 768px) { //tablets
+	html {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 480px) { //phones
+	html {
+		font-size: 12px;
+	}
+}
